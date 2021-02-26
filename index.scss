@@ -215,7 +215,7 @@ main {
     }
 }
 
-.results {
+.plants {
     display: flex;
     flex-direction: column;
     background-color: #F2F2F2;
@@ -243,7 +243,7 @@ main {
         grid-column-gap: 20px;
         grid-row-gap: 20px;
 
-        .results__card {
+        .plants__card {
             position: relative;
             background-color: #FFF;
             border-radius: 5px;
@@ -344,6 +344,7 @@ main {
                         grid-row: 3;
                         display: flex;
                         justify-content: flex-end;
+                        align-items: center;
 
                         img {
                             height: 16px;
