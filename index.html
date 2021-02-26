@@ -16,174 +16,165 @@
       <h1 class="hero__message">Find your next green friend</h1>
       <img class="hero__arrow" src="images/icons/arrow-down.svg" alt="Arrow Down">
   </header>
-  </header>
 
-  <main>
-    <section id="selects" class="selects">
-      <div class="selects__content">
-        <div id="select-sunlight" class="select">
-          <img class="select__illustration select__illustration--sun" src="images/illustrations/sun.png" alt="Sun">
-          <p class="select__description">
-            <strong>1.</strong> Set the amount of <strong>sunlight</strong> your plant will get.
-          </p>
-          <div class="select__input">
-            <select id="select-sunlight" name="select[sunlight]">
-              <option value="" selected>Select...</option>
-              <option value="0:30">0:30h</option>
-              <option value="1:00">1:00h</option>
-              <option value="2:00">2:00h</option>
-              <option value="3:00">3:00h</option>
-              <option value="4:00">4:00h</option>
-              <option value="6:00">5:00h</option>
-              <option value="8:00">8:00h</option>
-              <option value="12:00">12:00h</option>
-            </select>
+  <section id="selects" class="selects">
+    <div class="selects__content">
+      <div id="select-sunlight" class="select">
+        <img class="select__illustration select__illustration--sun" src="images/illustrations/sun.png" alt="Sun">
+        <p class="select__description">
+          <strong>1.</strong> Set the amount of <strong>sunlight</strong> your plant will get.
+        </p>
+        <div class="select__input">
+          <select id="select-sunlight" name="select[sunlight]">
+            <option value="" selected>Select...</option>
+            <option value="0:30">0:30h</option>
+            <option value="1:00">1:00h</option>
+            <option value="2:00">2:00h</option>
+            <option value="3:00">3:00h</option>
+            <option value="4:00">4:00h</option>
+            <option value="6:00">5:00h</option>
+            <option value="8:00">8:00h</option>
+            <option value="12:00">12:00h</option>
+          </select>
 
-            <span class="select__input--deactived">
-              <svg width="18" height="9" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M17.4202 0L9.00041 7.88733L0.580672 0L0 0.568664L9.00041 9L18 0.568664L17.4202 0Z"
-                  fill="#A8A8A8" />
-              </svg>
+          <span class="select__input--deactived">
+            <svg width="18" height="9" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M17.4202 0L9.00041 7.88733L0.580672 0L0 0.568664L9.00041 9L18 0.568664L17.4202 0Z" fill="#A8A8A8" />
+            </svg>
 
-            </span>
+          </span>
 
-            <span class="select__input--actived">
-              <svg transform="rotate(180)" width="18" height="9" viewBox="0 0 18 9" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M17.4202 0L9.00041 7.88733L0.580672 0L0 0.568664L9.00041 9L18 0.568664L17.4202 0Z"
-                  fill="#A8A8A8" />
-              </svg>
-            </span>
-          </div>
+          <span class="select__input--actived">
+            <svg transform="rotate(180)" width="18" height="9" viewBox="0 0 18 9" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M17.4202 0L9.00041 7.88733L0.580672 0L0 0.568664L9.00041 9L18 0.568664L17.4202 0Z" fill="#A8A8A8" />
+            </svg>
+          </span>
         </div>
-
-        <div id="select-water" class="select">
-          <img class="select__illustration select__illustration--wateringcan" src="images/illustrations/wateringcan.png"
-            alt="Watering can">
-          <p class="select__description">
-            <strong>2.</strong> How often do you want to <strong>walter</strong> your plant?
-          </p>
-          <div class="select__input">
-            <select id="select-water" name="select[water]">
-              <option value="" selected>Select...</option>
-              <option value="1">0</option>
-              <option value="2">1</option>
-              <option value="3">2</option>
-              <option value="4">3</option>
-              <option value="4">4</option>
-              <option value="6">5</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-            </select>
-
-            <span class="select__input--deactived">
-              <svg width="18" height="9" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M17.4202 0L9.00041 7.88733L0.580672 0L0 0.568664L9.00041 9L18 0.568664L17.4202 0Z"
-                  fill="#A8A8A8" />
-              </svg>
-
-            </span>
-
-            <span class="select__input--actived">
-              <svg transform="rotate(180)" width="18" height="9" viewBox="0 0 18 9" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M17.4202 0L9.00041 7.88733L0.580672 0L0 0.568664L9.00041 9L18 0.568664L17.4202 0Z"
-                  fill="#A8A8A8" />
-              </svg>
-            </span>
-          </div>
-        </div>
-
-        <div id="select-pet" class="select">
-          <img class="select__illustration select__illustration--dog" src="images/illustrations/dog.png" alt="Dog">
-          <p class="select__description">
-            <strong>3.</strong> Do you have pets? Do they <strong>chew</strong> plants?
-          </p>
-          <div class="select__input">
-            <select name="select[pet]" id="select-pet">
-              <option value="" selected>Select...</option>
-              <option value="true">Yes</option>
-              <option value="false">No</option>
-            </select>
-            <span class="select__input--deactived">
-              <svg width="18" height="9" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M17.4202 0L9.00041 7.88733L0.580672 0L0 0.568664L9.00041 9L18 0.568664L17.4202 0Z"
-                  fill="#A8A8A8" />
-              </svg>
-
-            </span>
-
-            <span class="select__input--actived">
-              <svg transform="rotate(180)" width="18" height="9" viewBox="0 0 18 9" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M17.4202 0L9.00041 7.88733L0.580672 0L0 0.568664L9.00041 9L18 0.568664L17.4202 0Z"
-                  fill="#A8A8A8" />
-              </svg>
-            </span>
-          </div>
-        </div>
-
       </div>
-    </section>
 
-    <section id="plants" class="plants">
-      <div class="plants__header">
-        <img class="plants__illustration" src="images/illustrations/pick.png" alt="Hand holding a plant" srcset="">
-        <h2>Our picks for you</h2>
-      </div>
-    
-      <div class="plants__content">
-        <div class="plants__card plants__card--favotire">
-          <div class="plant">
-            <img class="plant__image" src="images/plants/bunny-ears-cacti.jpg" alt="bunny-ears-cacti">
-            <h4 class="plant__name">Bunny Eats Cacti</h4>
-            <h5 class="plant__price">$24</h5>
-            <div class="plant__icons">
-              <img src="images/icons/pet.svg" alt="Pet Icon">
-              <img src="images/icons/mid-sun.svg" alt="Sun Icon">
-              <img src="images/icons/1-drop.svg" alt="Drop Icon">
-            </div>
-          </div>
+      <div id="select-water" class="select">
+        <img class="select__illustration select__illustration--wateringcan" src="images/illustrations/wateringcan.png"
+          alt="Watering can">
+        <p class="select__description">
+          <strong>2.</strong> How often do you want to <strong>walter</strong> your plant?
+        </p>
+        <div class="select__input">
+          <select id="select-water" name="select[water]">
+            <option value="" selected>Select...</option>
+            <option value="1">0</option>
+            <option value="2">1</option>
+            <option value="3">2</option>
+            <option value="4">3</option>
+            <option value="4">4</option>
+            <option value="6">5</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+
+          <span class="select__input--deactived">
+            <svg width="18" height="9" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M17.4202 0L9.00041 7.88733L0.580672 0L0 0.568664L9.00041 9L18 0.568664L17.4202 0Z" fill="#A8A8A8" />
+            </svg>
+
+          </span>
+
+          <span class="select__input--actived">
+            <svg transform="rotate(180)" width="18" height="9" viewBox="0 0 18 9" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M17.4202 0L9.00041 7.88733L0.580672 0L0 0.568664L9.00041 9L18 0.568664L17.4202 0Z" fill="#A8A8A8" />
+            </svg>
+          </span>
         </div>
-    
-        <div class="plants__card plants__card--options">
-          <div class="plant">
-            <img class="plant__image" src="images/plants/bunny-ears-cacti.jpg" alt="bunny-ears-cacti">
-            <h6 class="plant__name">Bunny Eats Cacti</h6>
-            <h6 class="plant__price">$24</h6>
-            <div class="plant__icons">
-              <img src="images/icons/pet.svg" alt="Pet Icon">
-              <img src="images/icons/mid-sun.svg" alt="Sun Icon">
-              <img src="images/icons/1-drop.svg" alt="Drop Icon">
-            </div>
+      </div>
+
+      <div id="select-pet" class="select">
+        <img class="select__illustration select__illustration--dog" src="images/illustrations/dog.png" alt="Dog">
+        <p class="select__description">
+          <strong>3.</strong> Do you have pets? Do they <strong>chew</strong> plants?
+        </p>
+        <div class="select__input">
+          <select name="select[pet]" id="select-pet">
+            <option value="" selected>Select...</option>
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+          </select>
+          <span class="select__input--deactived">
+            <svg width="18" height="9" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M17.4202 0L9.00041 7.88733L0.580672 0L0 0.568664L9.00041 9L18 0.568664L17.4202 0Z" fill="#A8A8A8" />
+            </svg>
+
+          </span>
+
+          <span class="select__input--actived">
+            <svg transform="rotate(180)" width="18" height="9" viewBox="0 0 18 9" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M17.4202 0L9.00041 7.88733L0.580672 0L0 0.568664L9.00041 9L18 0.568664L17.4202 0Z" fill="#A8A8A8" />
+            </svg>
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="plants" class="plants">
+    <div class="plants__header">
+      <img class="plants__illustration" src="images/illustrations/pick.png" alt="Hand holding a plant" srcset="">
+      <h2>Our picks for you</h2>
+    </div>
+
+    <div class="plants__content">
+      <div class="plants__card plants__card--favotire">
+        <div class="plant">
+          <img class="plant__image" src="images/plants/bunny-ears-cacti.jpg" alt="bunny-ears-cacti">
+          <div class="plant__name">Bunny eats cacti</div>
+          <div class="plant__price">$25</div>
+          <div class="plant__icons">
+            <img src="images/icons/pet.svg" alt="Pet Icon">
+            <img src="images/icons/mid-sun.svg" alt="Sun Icon">
+            <img src="images/icons/1-drop.svg" alt="Drop Icon">
           </div>
         </div>
       </div>
-    
-      <div class="plants__footer">
-        <a href="#selects">
-          <span><img src="images/icons/arrow-up.svg" alt="Arrow Up"></span>
-          <span>back to the top</span>
-        </a>
-      </div>
-    </section>
 
-    <section id="no-plants" class="no-plants">
-      <div class="no-plants__content">
-        <h3>No results yet…</h3>
-        <p>Use the filters above to find the plant that best fits your environment :)</p>
+      <div class="plants__card plants__card--options">
+        <div class="plant">
+          <img class="plant__image" src="images/plants/bunny-ears-cacti.jpg" alt="bunny-ears-cacti">
+          <div class="plant__name">Bunny eats cacti</div>
+          <div class="plant__price">$25</div>
+          <div class="plant__icons">
+            <img src="images/icons/pet.svg" alt="Pet Icon">
+            <img src="images/icons/mid-sun.svg" alt="Sun Icon">
+            <img src="images/icons/1-drop.svg" alt="Drop Icon">
+          </div>
+        </div>
       </div>
+    </div>
 
-      <img class="no-plants__illustration" src="images/illustrations/no-results.png" alt="No result icon">
-    </section>
-  </main>
+    <div class="plants__footer">
+      <a href="#selects">
+        <span><img src="images/icons/arrow-up.svg" alt="Arrow Up"></span>
+        <span>back to the top</span>
+      </a>
+    </div>
+  </section>
+
+  <section id="no-plants" class="no-plants">
+    <div class="no-plants__content">
+      <h2>No results yet…</h2>
+      <p>Use the filters above to find the plant that best fits your environment :)</p>
+    </div>
+
+    <img class="no-plants__illustration" src="images/illustrations/no-results.png" alt="No result icon">
+  </section>
 </body>
 
 </html>
