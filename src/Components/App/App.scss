@@ -1,6 +1,8 @@
-h2 {
-    font-size: 40px;
-    line-height: 49px;
+@media(max-width: 1200px) {
+    h2 {
+        font-size: 40px;
+        line-height: 49px;
+    }
 }
 
 @media(min-width: 1200px) {

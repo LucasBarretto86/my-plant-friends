@@ -12,9 +12,9 @@ class App extends React.Component {
 
         this.state = {
             selects: [
-                { type: "sunlight", description: "<b>1.</b> Set the amount of <b>sunlight</b> your plant will get.", label: "h", values: ["0:30", "1:00", "2:00", "3:00", "4:00", "5:00", "6:00", "7:00", "8:00", "12:00"] },
-                { type: "water", description: "<b>2.<b> How often do you want to <b>water</b> your plant?", label: " times", values: ["1", "2", "3", "4", "5", "6", "7", "8"] },
-                { type: "sunlight", description: "<b>3.</> Do you have pets? Do they <b>chew<b/> plants? ", label: "", values: ["yes", "no"] }
+                { type: "sunlight", description: "<strong>1.</strong> Set the amount of <strong>sunlight</strong> your plant will get.", unit: "h", values: ["0:30", "1:00", "2:00", "3:00", "4:00", "5:00", "6:00", "7:00", "8:00", "12:00"] },
+                { type: "water", description: "<strong>2.</strong> How often do you want to <strong>water</strong> your plant?", unit: " times", values: ["1", "2", "3", "4", "5", "6", "7", "8"] },
+                { type: "dog", description: "<strong>3.</strong> Do you have pets? Do they <strong>chew</strong> plants? ", unit: "", values: ["yes", "no"] }
             ]
         }
     }
@@ -24,8 +24,8 @@ class App extends React.Component {
             <div id="app" className="app">
                 <Hero />
                 <Selects selects={this.state.selects} />
-                <Plants />
-                <NoPlants />
+                {/* <Plants />
+                <NoPlants /> */}
             </div>
         )
     }

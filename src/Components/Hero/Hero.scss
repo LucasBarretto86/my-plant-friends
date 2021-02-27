@@ -1,43 +1,46 @@
-.hero {
-    position: relative;
-    padding: 40px 32px;
-    pointer-events: none;
-    height: 100vh;
-    background-color: #75BC97;
-    background-image:
-        url("images/hero/mobile/mobile-leaves.png"),
-        url("images/hero/mobile/mobile-plantperson.png");
-    background-size: 100% auto, auto 234px;
-    background-position: top center, bottom 25px center;
-    background-repeat: no-repeat;
-    pointer-events: none;
+@media(max-width: 1200px) {
+    .hero {
+        position: relative;
+        padding: 40px 32px;
+        pointer-events: none;
+        height: 100vh;
+        background-color: #75BC97;
+        background-image:
+            url("../../images/hero/mobile/mobile-leaves.png"),
+            url("../../images/hero/mobile/mobile-plantperson.png");
+        background-size: 100% auto, auto 234px;
+        background-position: top center, bottom 25px center;
+        background-repeat: no-repeat;
+        pointer-events: none;
 
 
-    &__content {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        z-index: 1000;
-        pointer-events: initial;
-    }
+        &__content {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            z-index: 1000;
+            pointer-events: initial;
+        }
 
-    &__logo {
-        width: 212px;
-        margin-bottom: 32px;
-    }
+        &__logo {
+            width: 212px;
+            margin-bottom: 32px;
+        }
 
-    &__message {
-        font-size: 40px;
-        line-height: 48.76px;
-        color: #FFF;
-        margin-bottom: 24px;
-    }
+        &__message {
+            font-size: 40px;
+            line-height: 48.76px;
+            color: #FFF;
+            margin-bottom: 24px;
+        }
 
-    &__arrow {
-        height: 46px;
-        width: 36px;
+        &__arrow {
+            height: 46px;
+            width: 36px;
+        }
     }
 }
+
 
 @media(min-width: 1200px) {
     .hero {
@@ -46,13 +49,13 @@
         height: 500px;
         background-color: #75BC97;
         background-image:
-            url("../../../images/hero/desktop/left-leaves.png"),
-            url("../../../images/hero/desktop/right-leaves.png"),
-            url("../../../images/hero/desktop/plantperson.png");
+            url("../../images/hero/desktop/left-leaves.png"),
+            url("../../images/hero/desktop/right-leaves.png"),
+            url("../../images/hero/desktop/plantperson.png");
         background-size: 60% auto, auto 100%, auto 85%;
         background-position: top left, top right, top 34px right 28%;
         background-repeat: no-repeat;
-    
+
         &__content {
             display: flex;
             flex-direction: column;
@@ -60,20 +63,20 @@
             max-height: 500px;
             z-index: 1000;
         }
-    
+
         &__logo {
             width: 212px;
             margin-bottom: 32px;
         }
-    
+
         &__message {
             color: #FFF;
             margin-bottom: 24px;
         }
-    
+
         &__arrow {
             height: 46px;
             width: 36px;
         }
-    } 
+    }
 }

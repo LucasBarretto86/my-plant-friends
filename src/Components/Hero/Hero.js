@@ -1,6 +1,9 @@
 import React from 'react'
+import logo from '../../images/icons/logo-white.svg'
+import arrow from '../../images/icons/arrow-down.svg'
 
-import "../Hero/Hero.scss"
+import "./Hero.scss"
+
 
 class Hero extends React.Component {
     render() {
@@ -8,9 +11,9 @@ class Hero extends React.Component {
             <header id="hero" className="hero">
                 <div className="hero__content">
                     <a href="#selects">
-                        <img className="hero__logo" src="images/icons/logo-white.svg" alt="Greenthumb" />
+                        <img className="hero__logo" src={logo} alt="Greenthumb" />
                         <h1 className="hero__message">Find your next green friend</h1>
-                        <img className="hero__arrow" src="images/icons/arrow-down.svg" alt="Arrow Down" />
+                        <img className="hero__arrow" src={arrow} alt="Arrow Down" />
                     </a>
                 </div>
             </header>

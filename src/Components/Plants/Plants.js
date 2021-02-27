@@ -9,7 +9,7 @@ class Plants extends React.Component {
         return (
             <section id="plants" className="plants">
                 <div className="plants__header">
-                    <img className="plants__illustration" src="images/illustrations/pick.png" alt="Hand holding a plant" />
+                    <img className="plants__illustration" src="../../images/illustrations/pick.png" alt="Hand holding a plant" />
                     <h2>Our picks for you</h2>
                 </div>
 
@@ -25,7 +25,7 @@ class Plants extends React.Component {
 
                 <div className="plants__footer">
                     <a href="#selects">
-                        <span><img src="images/icons/arrow-up.svg" alt="Arrow Up" /></span>
+                        <span><img src="../../images/icons/arrow-up.svg" alt="Arrow Up" /></span>
                         <span>back to the top</span>
                     </a>
                 </div>

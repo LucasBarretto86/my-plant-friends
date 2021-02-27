@@ -1,108 +1,10 @@
-.select {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 75px 44px auto;
-    grid-gap: 16px;
-    width: 100%;
-
-    &__illustration {
-        margin-top: auto;
-
-        &--sun {
-            width: 75px;
-            height: 75px;
-        }
-
-        &--wateringcan {
-            height: 75px;
-            width: 104px;
-            transform: matrix(-1, 0, 0, 1, 0, 0);
-        }
-
-        &--dog {
-            width: 75px;
-            height: 62px;
-        }
-    }
-
-    &__input {
-        position: relative;
-        width: 100%;
-        height: 40px;
-        border: 1px solid #A8A8A8;
-        border-radius: 48px;
-        background-color: transparent;
-
-        &:focus-within {
-            background-color: #F8F8F8;
-        }
-
-        span {
-            position: absolute;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            top: 0;
-            left: auto;
-            right: 16px;
-            bottom: 0;
-            width: 18px;
-            pointer-events: none;
-        }
-
-        select {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            appearance: none;
-            -moz-appearance: none;
-            background-color: transparent;
-            width: 100%;
-            height: 40px;
-            padding: 0 32px;
-            border-width: 0;
-            color: #A8A8A8;
-            outline: none;
-
-            &~.select__input--actived {
-                display: none;
-            }
-
-            &~.select__input--deactived {
-                display: flex;
-            }
-
-            &:focus-within:hover {
-                &~.select__input--actived {
-                    display: flex;
-                }
-
-                &~.select__input--deactived {
-                    display: none;
-                }
-            }
-
-            option {
-                padding: 0;
-                margin: 0 -24px;
-            }
-        }
-    }
-}
-
-.select+.select {
-    margin-top: 56px;
-}
-
-@media(min-width: 1200px) {
+@media(max-width: 1200px) {
     .select {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 75px 44px auto;
         grid-gap: 16px;
-        width: 224px;
+        width: 100%;
 
         &__illustration {
             margin-top: auto;
@@ -113,6 +15,106 @@
             }
 
             &--wateringcan {
+                height: 75px;
+                width: 104px;
+                transform: matrix(-1, 0, 0, 1, 0, 0);
+            }
+
+            &--dog {
+                width: 75px;
+                height: 62px;
+            }
+        }
+
+        &__input {
+            position: relative;
+            width: 100%;
+            height: 40px;
+            border: 1px solid #A8A8A8;
+            border-radius: 48px;
+            background-color: transparent;
+
+            &:focus-within {
+                background-color: #F8F8F8;
+            }
+
+            span {
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                top: 0;
+                left: auto;
+                right: 16px;
+                bottom: 0;
+                width: 18px;
+                pointer-events: none;
+            }
+
+            select {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                appearance: none;
+                -moz-appearance: none;
+                background-color: transparent;
+                width: 100%;
+                height: 40px;
+                padding: 0 32px;
+                border-width: 0;
+                color: #A8A8A8;
+                outline: none;
+
+                &~.select__input--actived {
+                    display: none;
+                }
+
+                &~.select__input--deactived {
+                    display: flex;
+                }
+
+                &:focus-within:hover {
+                    &~.select__input--actived {
+                        display: flex;
+                    }
+
+                    &~.select__input--deactived {
+                        display: none;
+                    }
+                }
+
+                option {
+                    padding: 0;
+                    margin: 0 -24px;
+                }
+            }
+        }
+    }
+
+    .select+.select {
+        margin-top: 56px;
+    }
+}
+
+@media(min-width: 1200px) {
+    .select {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 75px auto auto;
+        grid-gap: 16px;
+        width: 224px;
+
+        &__illustration {
+            margin-top: auto;
+
+            &--sunlight {
+                width: 75px;
+                height: 75px;
+            }
+
+            &--water {
                 height: 75px;
                 width: 104px;
                 transform: matrix(-1, 0, 0, 1, 0, 0);

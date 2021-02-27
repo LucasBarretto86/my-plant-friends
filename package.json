@@ -2,9 +2,9 @@
   "name": "front-end-test-2",
   "version": "1.0.0",
   "description": "Simple Parcel Sandbox",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "start": "parcel index.html --open parcel images/*"
+    "start": "parcel src/index.html --open"
   },
   "dependencies": {
     "babel-preset-env": "^1.7.0",
