@@ -1,6 +1,7 @@
 node_modules
 *.lock
-package-lock.json
 .cache
 .vscode
+package-lock.json
+yarn-error.log
 dist
