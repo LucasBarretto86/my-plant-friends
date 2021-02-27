@@ -1,0 +1,17 @@
+h2 {
+    font-size: 40px;
+    line-height: 49px;
+}
+
+@media(min-width: 1200px) {
+    h1 {
+        font-size: 70px;
+        line-height: 85.33px;
+    }
+
+    h2 {
+        font-size: 55px;
+        line-height: 67.05px;
+    }
+
+}

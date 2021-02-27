@@ -1,0 +1,142 @@
+.plant {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 224px 28px 28px;
+    width: 100%;
+    height: 100%;
+    padding-top: 24px;
+
+    &__name,
+    &__price {
+        font-size: 16px;
+        line-height: 28px;
+        font-weight: 700;
+        color: #1E6B4E;
+        display: flex;
+        align-items: center;
+    }
+
+    &__image {
+        grid-column: 1 / span 4;
+        height: 100%;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    &__name {
+        grid-column: 1 / span 4;
+        grid-row: 2;
+    }
+
+    &__price {
+        grid-column: 1 / span 2;
+        grid-row: 3;
+    }
+
+    &__icons {
+        grid-column: 3 / span 2;
+        grid-row: 3;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        img {
+            height: 16px;
+
+            +img {
+                margin-left: 8px;
+            }
+        }
+    }
+}
+
+@media(min-width: 1200px) {
+    .plant {
+        display: grid;
+        grid-template-columns: repear(4, 1fr);
+        grid-template-rows: 160px 28px 28px;
+        width: 100%;
+        height: 100%;
+
+        &__name,
+        &__price {
+            font-size: 16px;
+            line-height: 28px;
+            font-weight: 700;
+            color: #1E6B4E;
+            display: flex;
+            align-items: center;
+        }
+
+        &__image {
+            grid-column: 1 / span 4;
+            height: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        &__name {
+            grid-column: 1 / span 4;
+            grid-row: 2;
+        }
+
+        &__price {
+            grid-column: 1 / span 2;
+            grid-row: 3;
+        }
+
+        &__icons {
+            grid-column: 3 / span 2;
+            grid-row: 3;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            img {
+                height: 16px;
+
+                +img {
+                    margin-left: 8px;
+                }
+            }
+        }
+    }
+
+    .plants__card--favotire .plant {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 352px 30px 30px;
+        grid-row-gap: 16px;
+        padding: 20px;
+
+        &__image {
+            grid-column: 1 / span 4;
+        }
+
+        &__name {
+            grid-column: 1 / span 2;
+            grid-row: 2 / span 2;
+            font-size: 35px;
+            line-height: 37px;
+        }
+
+        &__price {
+            grid-column: 3 / span 2;
+            grid-row: 2;
+            font-size: 24px;
+            line-height: 28px;
+            justify-content: flex-end;
+        }
+
+        &__icons {
+            img {
+                height: 25px;
+
+                +img {
+                    margin-left: 16px;
+                }
+            }
+        }
+    }
+
+}
