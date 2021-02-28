@@ -82,13 +82,9 @@ html {
         }
     }
 
-    .selects {
+    .selectBar {
         background-color: #FFF;
         padding: 24px 24px 48px 48px;
-
-        p {
-            padding-right: 24px;
-        }
 
         &__content {
             display: flex;
@@ -96,10 +92,10 @@ html {
             align-items: center;
         }
 
-        .select {
+        .selector {
             display: grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 75px 44px auto;
+            grid-template-rows: 75px auto auto;
             grid-gap: 16px;
             width: 100%;
 
@@ -117,13 +113,13 @@ html {
                     transform: matrix(-1, 0, 0, 1, 0, 0);
                 }
 
-                &--dog {
+                &--pets {
                     width: 75px;
                     height: 62px;
                 }
             }
 
-            &__input {
+            &__select {
                 position: relative;
                 width: 100%;
                 height: 40px;
@@ -164,20 +160,20 @@ html {
                     color: #A8A8A8;
                     outline: none;
 
-                    &~.select__input--actived {
+                    &~.selector__input--actived {
                         display: none;
                     }
 
-                    &~.select__input--deactived {
+                    &~.selector__input--deactived {
                         display: flex;
                     }
 
                     &:focus-within:hover {
-                        &~.select__input--actived {
+                        &~.selector__input--actived {
                             display: flex;
                         }
 
-                        &~.select__input--deactived {
+                        &~.selector__input--deactived {
                             display: none;
                         }
                     }
@@ -190,7 +186,7 @@ html {
             }
         }
 
-        .select+.select {
+        .selector+.selector {
             margin-top: 56px;
         }
     }
@@ -432,7 +428,7 @@ html {
 
     }
 
-    .selects {
+    .selectBar {
         background-color: #FFF;
         padding: 0 20%;
 
@@ -443,7 +439,7 @@ html {
             height: 300px;
         }
 
-        .select {
+        .selector {
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows: 75px 44px auto;
@@ -464,13 +460,13 @@ html {
                     transform: matrix(-1, 0, 0, 1, 0, 0);
                 }
 
-                &--dog {
+                &--pets {
                     width: 75px;
                     height: 62px;
                 }
             }
 
-            &__input {
+            &__select {
                 position: relative;
                 width: 220px;
                 height: 40px;
@@ -511,20 +507,20 @@ html {
                     color: #A8A8A8;
                     outline: none;
 
-                    &~.select__input--actived {
+                    &~.selector__input--actived {
                         display: none;
                     }
 
-                    &~.select__input--deactived {
+                    &~.selector__input--deactived {
                         display: flex;
                     }
 
                     &:focus-within:hover {
-                        &~.select__input--actived {
+                        &~.selector__input--actived {
                             display: flex;
                         }
 
-                        &~.select__input--deactived {
+                        &~.selector__input--deactived {
                             display: none;
                         }
                     }
