@@ -11,9 +11,9 @@ class Selector extends React.Component {
         super(props);
 
         this.state = {
-            sun: null,
-            water: null,
-            pets: null
+            sun: "",
+            water: "",
+            pets: ""
         }
 
         this.illustration = this.illustration.bind(this);
@@ -83,7 +83,7 @@ class Selector extends React.Component {
                 <div className="selector__description" >{this.description()}</div>
 
                 <div className="selector__select">
-                    <select id={`select-${this.props.type}`} onClick={this.handleClick} onChange={this.handleChange} onBlur={this.handleBlur} value={this.state[this.props.type.toString()]} >
+                    <select id={`select-${this.props.type}`} onClick={this.handleClick} onChange={this.handleChange} onBlur={this.handleBlur} value={this.state[this.props.type]} >
                         <option value="">Select...</option>
                         {
                             this.props.options.map((option) => {

@@ -1,6 +1,8 @@
 import React from 'react'
 
-import "../NoPlants/NoPlants"
+import noResultImage from './Images/no-results.png';
+
+import "./NoPlants.scss"
 
 class NoPlants extends React.Component {
     render() {
@@ -11,7 +13,7 @@ class NoPlants extends React.Component {
                     <p>Use the filters above to find the plant that best fits your environment :)</p>
                 </div>
 
-                <img class="no-plants__illustration" src="../../images/illustrations/no-results.png" alt="No result icon" />
+                <img class="no-plants__illustration" src={noResultImage} alt="No result icon" />
             </section>
         )
     }

@@ -4,14 +4,15 @@
         padding: 40px 32px;
         pointer-events: none;
         height: 100vh;
+        min-height: 480px;
+        max-height: 660px;
         background-color: #75BC97;
         background-image:
             url("./Images/top-leaves.png"),
             url("./Images/plantperson.png");
-        background-size: 100% auto, auto 234px;
-        background-position: top center, bottom 25px center;
+        background-size: 100% 85vh, auto 35vh;
+        background-position: bottom 35vh center, bottom 25px center;
         background-repeat: no-repeat;
-        pointer-events: none;
 
 
         &__content {
@@ -52,7 +53,7 @@
             url("./Images/left-leaves.png"),
             url("./Images/right-leaves.png"),
             url("./Images/plantperson_desktop.png");
-        background-size: 60% auto, auto 100%, auto 85%;
+        background-size: 60% 100%, auto 100%, auto 85%;
         background-position: top left, top right, top 34px right 28%;
         background-repeat: no-repeat;
 

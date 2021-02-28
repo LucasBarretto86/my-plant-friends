@@ -1,19 +1,41 @@
 import React from 'react'
+import icons from './Icons/*.svg'
 
-import "../Plant/Plant.scss"
+
+import "./Plant.scss"
 
 class Plant extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.displayPlantIconsSet = this.displayPlantIconsSet.bind(this);
+    }
+
+    displayPlantIconsSet() {
+        let iconsSet = [];
+
+        if (this.props.plant.toxic) iconsSet.push(<img key={`toxic-${this.props.plant.id}`} src={icons["toxic"]} alt="Toxic Icon" />);
+        iconsSet.push(<img key={`sun-${this.props.plant.id}`} src={icons[`sun-${this.props.plant.sun}`]} alt="Sun Icon" />)
+        iconsSet.push(<img key={`water-${this.props.plant.id}`} src={icons[`water-${this.props.plant.water}`]} alt="Water Icon" />)
+        if (this.props.plant.pets) iconsSet.push(<img key={`pets-${this.props.plant.id}`} src={icons["pets"]} alt="Dog Icon" />);
+
+        return iconsSet;
+    }
 
     render() {
         return (
-            <div class="plant">
-                <img class="plant__image" src="../../images/plants/bunny-ears-cacti.jpg" alt="bunny-ears-cacti" />
-                <div class="plant__name">Bunny eats cacti</div>
-                <div class="plant__price">$25</div>
-                <div class="plant__icons">
-                    <img src="../../images/icons/pet.svg" alt="Pet Icon" />
-                    <img src="../../images/icons/mid-sun.svg" alt="Sun Icon" />
-                    <img src="../../images/icons/1-drop.svg" alt="Drop Icon" />
+            <div className={`plant plant--${this.props.plant.staff_favorite ? "favotire" : ""}`}>
+                <div className="plant__content">
+                    <img className="plant__image" src={this.props.plant.url} alt={`Image from ${this.props.plant.name}`} />
+                    <div className="plant__name">{this.props.plant.name}</div>
+                    <div className="plant__price">${this.props.plant.price}</div>
+                    <div className="plant__icons">
+                        {
+                            this.displayPlantIconsSet().map(icon => {
+                                return icon
+                            })
+                        }
+                    </div>
                 </div>
             </div>
         )

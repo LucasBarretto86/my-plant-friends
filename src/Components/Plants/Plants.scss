@@ -33,35 +33,6 @@
             margin-bottom: 32px;
             overflow-x: scroll;
             padding: 0 24px;
-
-            .plants__card {
-                position: relative;
-                padding: 18px;
-                width: 260px;
-                background-color: #FFF;
-                border-radius: 5px;
-            }
-
-            .plants__card--favotire {
-                &:after {
-                    content: '✨ Staff favorite';
-                    display: flex;
-                    align-items: center;
-                    position: absolute;
-                    top: 20px;
-                    left: 0;
-                    right: auto;
-                    bottom: auto;
-                    height: 40px;
-                    width: 50%;
-                    padding-left: 8px;
-                    font-size: 12.8px;
-                    font-weight: 700;
-                    border-radius: 0 24px 24px 0;
-                    background-color: #75BC97;
-                    color: #FFF;
-                }
-            }
         }
 
         &__footer {

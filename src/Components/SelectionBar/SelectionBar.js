@@ -11,7 +11,7 @@ class SelectionBar extends React.Component {
     render() {
         return (
             <section id="selection-bar" className="selection-bar">
-                <div class="selection-bar__content">
+                <div className="selection-bar__content">
                     {
                         this.props.selections.map((selection, index) => {
                             return <Selector key={index} type={selection.type} options={selection.options} onSearchForPlants={this.props.onSearchForPlants} />
