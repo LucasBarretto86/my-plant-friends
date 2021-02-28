@@ -9,12 +9,12 @@
         &__illustration {
             margin-top: auto;
 
-            &--sun {
+            &--sunlight {
                 width: 75px;
                 height: 75px;
             }
 
-            &--wateringcan {
+            &--water {
                 height: 75px;
                 width: 104px;
                 transform: matrix(-1, 0, 0, 1, 0, 0);
@@ -26,6 +26,11 @@
             }
         }
 
+        &__description {
+            padding-right: 64px;
+        }
+
+
         &__select {
             position: relative;
             width: 100%;
@@ -34,7 +39,8 @@
             border-radius: 48px;
             background-color: transparent;
 
-            .selector__arrow {
+            &:after {
+                content: '';
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -48,17 +54,10 @@
                 width: 20px;
                 height: 100%;
 
+                background-image: url("../../Images/Icons/short-arrow-down.svg");
                 background-size: 18px auto;
                 background-position: top 14px center;
                 background-repeat: no-repeat;
-
-                &--active {
-                    background-image: url("../../Images/Icons/short-arrow-up.svg");
-                }
-
-                &--inactive {
-                    background-image: url("../../Images/Icons/short-arrow-down.svg");
-                }
             }
 
             select {
@@ -77,6 +76,7 @@
                     padding: 0;
                     margin: 0 -24px;
                 }
+
             }
         }
     }
@@ -122,7 +122,8 @@
             border-radius: 48px;
             background-color: transparent;
 
-            .selector__arrow {
+            &:after {
+                content: '';
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -136,20 +137,10 @@
                 width: 20px;
                 height: 100%;
 
+                background-image: url("../../Images/Icons/short-arrow-down.svg");
                 background-size: 18px auto;
                 background-position: top 14px center;
                 background-repeat: no-repeat;
-
-                &--active {
-                    background-image: url("../../Images/Icons/short-arrow-up.svg");
-                }
-
-                &--inactive {
-                    background-image: url("../../Images/Icons/short-arrow-down.svg");
-                }
-
-
-
             }
 
             select {

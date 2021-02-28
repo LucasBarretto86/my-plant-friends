@@ -18,7 +18,6 @@ class Selector extends React.Component {
 
         this.illustration = this.illustration.bind(this);
         this.description = this.description.bind(this);
-        this.handleClick = this.handleClick.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.parametrize = this.parametrize.bind(this);
         this.handleBlur = this.handleBlur(this);
@@ -47,20 +46,14 @@ class Selector extends React.Component {
     }
 
     searchForPlants() {
-        if (Object.values(this.state).every(state => { (state == null || state == "" || state == undefined) })) return;
+        // if (Object.values(this.state).every(state => { (state == null || state == "" || state == undefined) })) return;
 
-        this.props.onSearchForPlants(this.parametrize())
+        // this.props.onSearchForPlants(this.parametrize())
     }
 
     parametrize() {
         // this.state = { sun: "high", water: "regularly", pets: "no" }
-        return Object.entries(this.state).map(objs => objs.join("=")).join("&")
-    }
-
-    handleClick(event) {
-        let select = event.target
-        select.nextSibling.classList.toggle("hidden");
-        select.nextSibling.nextSibling.classList.toggle("hidden");
+        // return Object.entries(this.state).map(objs => objs.join("=")).join("&")
     }
 
     handleChange(event) {
@@ -98,8 +91,6 @@ class Selector extends React.Component {
                             })
                         }
                     </select>
-                    <span className="selector__arrow selector__arrow--active hidden"></span>
-                    <span className="selector__arrow selector__arrow selector__arrow--inactive"></span>
                 </div>
             </div>
         )

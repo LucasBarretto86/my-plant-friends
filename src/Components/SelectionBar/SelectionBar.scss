@@ -2,6 +2,15 @@
     .selection-bar {
         background-color: #FFF;
         padding: 24px 24px 48px 48px;
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+            width: 100%
+        }
     }
 }
 
@@ -9,10 +18,15 @@
     .selection-bar {
         display: flex;
         background-color: #FFF;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 20%;
         height: max-content;
-        height: 300px;
+        padding: 0 20%;
+        
+        &__content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 300px;
+            width: 100%;
+        }
     }
 }
