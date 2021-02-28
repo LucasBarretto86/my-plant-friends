@@ -1,9 +1,8 @@
 import React from 'react'
-import logo from '../../images/icons/logo-white.svg'
-import arrow from '../../images/icons/arrow-down.svg'
+import logo from '../../Images/Icons/logo-white.svg'
+import arrow from '../../Images/Icons/arrow-down.svg'
 
 import "./Hero.scss"
-
 
 class Hero extends React.Component {
     render() {

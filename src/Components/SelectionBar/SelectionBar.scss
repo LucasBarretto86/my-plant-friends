@@ -1,0 +1,18 @@
+@media(max-width: 1200px) {
+    .selection-bar {
+        background-color: #FFF;
+        padding: 24px 24px 48px 48px;
+    }
+}
+
+@media(min-width: 1200px) {
+    .selection-bar {
+        display: flex;
+        background-color: #FFF;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20%;
+        height: max-content;
+        height: 300px;
+    }
+}
