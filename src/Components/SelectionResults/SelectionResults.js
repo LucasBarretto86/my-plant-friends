@@ -9,14 +9,14 @@ class SelectionResults extends React.Component {
         this.displayResults = this.displayResults.bind(this);
     }
 
-
     displayResults() {
-        if (this.props.plants.length < 0) {
+        if (this.props.hasPlants()) {
             return <Plants plants={this.props.plants} />
         } else {
             return <NoPlants />
         }
     }
+
     render() {
         return (
             <section id="selection-results" className="selection-results">

@@ -24,7 +24,7 @@ class App extends React.Component {
                     staff_favorite: true
                 },
                 {
-                    id: 1,
+                    id: 2,
                     name: "Euphorbia eritrea",
                     sun: "high",
                     water: "rarely",
@@ -41,12 +41,26 @@ class App extends React.Component {
             ]
         };
 
+        this.hasPlants = this.hasPlants.bind(this);
+        this.refreshResults = this.refreshResults.bind(this);
         this.searchForPlants = this.searchForPlants.bind(this);
     }
 
+    hasPlants() {
+        return (this.state.plants.length > 0);
+    }
+
+    refreshResults() {
+        document.querySelector("#selection-results").outerHTML.replace(
+            <SelectionResults plants={this.state.plants} onHasPlants={this.hasPlants} />
+        );
+
+    }
+
     searchForPlants(term) {
-        GreenThumb.search(term).then(plants => {
-            this.setState({ plants: plants })
+        GreenThumb.findMyGreenFriend(term).then(results => {
+            this.setState({ plants: results });
+            this.refreshResults();
         })
     }
 
@@ -55,7 +69,7 @@ class App extends React.Component {
             <div id="app" className="app">
                 <Hero />
                 <SelectionBar selections={this.state.selections} onSearchForPlants={this.searchForPlants} />
-                <SelectionResults plants={this.state.plants} />
+                <SelectionResults plants={this.state.plants} hasPlants={this.hasPlants} />
             </div>
         )
     }

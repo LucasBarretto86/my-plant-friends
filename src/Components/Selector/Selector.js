@@ -10,17 +10,11 @@ class Selector extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            sun: "",
-            water: "",
-            pets: ""
-        }
+        this.state = { value: "" };
 
         this.illustration = this.illustration.bind(this);
         this.description = this.description.bind(this);
         this.handleChange = this.handleChange.bind(this);
-        this.parametrize = this.parametrize.bind(this);
-        this.handleBlur = this.handleBlur(this);
     }
 
     illustration() {
@@ -45,35 +39,8 @@ class Selector extends React.Component {
         }
     }
 
-    searchForPlants() {
-        // if (Object.values(this.state).every(state => { (state == null || state == "" || state == undefined) })) return;
-
-        // this.props.onSearchForPlants(this.parametrize())
-    }
-
-    parametrize() {
-        // this.state = { sun: "high", water: "regularly", pets: "no" }
-        // return Object.entries(this.state).map(objs => objs.join("=")).join("&")
-    }
-
     handleChange(event) {
-        let select = event.target
-        switch (select.id) {
-            case "select-sunlight":
-                this.setState({ sun: event.target.value });
-                break;
-            case "select-water":
-                this.setState({ water: event.target.value });
-                break;
-            case "select-pets":
-                this.setState({ pets: event.target.value });
-                break;
-        }
-
-    }
-
-    handleBlur() {
-        this.searchForPlants();
+        this.state.value = event.target.value;
     }
 
     render() {
@@ -83,7 +50,7 @@ class Selector extends React.Component {
                 <div className="selector__description" >{this.description()}</div>
 
                 <div className="selector__select">
-                    <select id={`select-${this.props.type}`} onClick={this.handleClick} onChange={this.handleChange} onBlur={this.handleBlur} value={this.state[this.props.type]} >
+                    <select id={`select-${this.props.type}`} value={this.state.value} onChange={this.handleChange} >
                         <option value="">Select...</option>
                         {
                             this.props.options.map((option) => {

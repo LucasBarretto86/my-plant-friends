@@ -3,7 +3,7 @@
         background-color: #FFF;
         padding: 24px 24px 48px 48px;
 
-        &__content {
+        &__form {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -19,8 +19,8 @@
         background-color: #FFF;
         height: max-content;
         padding: 0 20%;
-        
-        &__content {
+
+        &__form {
             display: flex;
             justify-content: space-between;
             align-items: center;

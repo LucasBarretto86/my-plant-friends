@@ -4,7 +4,7 @@ import Plant from '../Plant/Plant'
 import picksImage from "./Images/pick.png";
 import arrowDnImage from '../../Images/Icons/arrow-up.svg'
 
-import "../Plants/Plants.scss"
+import "./Plants.scss"
 
 class Plants extends React.Component {
 
@@ -22,8 +22,18 @@ class Plants extends React.Component {
 
                 <div className="plants__content">
                     {
-                        this.props.plants.map((plant) => {
-                            return <Plant key={plant.id} plant={plant} />
+                        this.props.plants.map((plant, index) => {
+                            return <Plant
+                                key={index}
+                                staffFavorite={plant.staff_favorite}
+                                url={plant.url}
+                                name={plant.name}
+                                price={plant.price}
+                                toxicity={plant.toxicity}
+                                sun={plant.sun}
+                                water={plant.water}
+                                pets={plant.pets}
+                            />
                         })
                     }
                 </div>

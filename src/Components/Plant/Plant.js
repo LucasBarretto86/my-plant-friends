@@ -1,5 +1,5 @@
 import React from 'react'
-import icons from './Icons/*.svg'
+import iconsImages from './Icons/*.svg'
 
 
 import "./Plant.scss"
@@ -8,33 +8,34 @@ class Plant extends React.Component {
     constructor(props) {
         super(props);
 
-        this.displayPlantIconsSet = this.displayPlantIconsSet.bind(this);
+        this.isToxic = this.isToxic.bind(this);
+        this.isChewable = this.isChewable.bind(this);
     }
 
-    displayPlantIconsSet() {
-        let iconsSet = [];
+    isToxic() {
+        if (!this.props.toxicity) return
 
-        if (this.props.plant.toxic) iconsSet.push(<img key={`toxic-${this.props.plant.id}`} src={icons["toxic"]} alt="Toxic Icon" />);
-        iconsSet.push(<img key={`sun-${this.props.plant.id}`} src={icons[`sun-${this.props.plant.sun}`]} alt="Sun Icon" />)
-        iconsSet.push(<img key={`water-${this.props.plant.id}`} src={icons[`water-${this.props.plant.water}`]} alt="Water Icon" />)
-        if (this.props.plant.pets) iconsSet.push(<img key={`pets-${this.props.plant.id}`} src={icons["pets"]} alt="Dog Icon" />);
+        return <img key={`toxic-${this.key}`} src={iconsImages["toxic"]} alt="Toxic Icon" />;
+    }
 
-        return iconsSet;
+    isChewable() {
+        if (!this.props.pets) return;
+
+        return <img key={`pets-${this.key}`} src={iconsImages["pets"]} alt="Dog Icon" />;
     }
 
     render() {
         return (
-            <div className={`plant plant--${this.props.plant.staff_favorite ? "favotire" : ""}`}>
+            <div className={`plant plant--${this.props.staffFavorite ? "favotire" : ""}`}>
                 <div className="plant__content">
-                    <img className="plant__image" src={this.props.plant.url} alt={`Image from ${this.props.plant.name}`} />
-                    <div className="plant__name">{this.props.plant.name}</div>
-                    <div className="plant__price">${this.props.plant.price}</div>
+                    <img className="plant__image" src={this.props.url} alt={`Image from ${this.props.name}`} />
+                    <div className="plant__name">{this.props.name}</div>
+                    <div className="plant__price">${this.props.price}</div>
                     <div className="plant__icons">
-                        {
-                            this.displayPlantIconsSet().map(icon => {
-                                return icon
-                            })
-                        }
+                        {this.isToxic()}
+                        <img key={`sun-${this.key}`} src={iconsImages[`sun-${this.props.sun}`]} alt="Sun Icon" />
+                        <img key={`water-${this.key}`} src={iconsImages[`water-${this.props.water}`]} alt="Water Icon" />
+                        {this.isChewable()}
                     </div>
                 </div>
             </div>
