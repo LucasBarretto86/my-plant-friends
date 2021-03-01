@@ -5,6 +5,7 @@
         width: 260px;
         background-color: #FFF;
         border-radius: 5px;
+        box-shadow: 4px 8px 16px 0px rgb(0, 0, 0, 0.05);
 
         &__content {
             display: grid;
@@ -85,14 +86,15 @@
         position: relative;
         background-color: #FFF;
         border-radius: 5px;
-        
+        box-shadow: 8px 16px 32px 0px rgb(0, 0, 0, 0.05);
+
         &__content {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: 160px 28px 28px;
             padding: 18px;
         }
-        
+
         &__name,
         &__price {
             font-size: 16px;
