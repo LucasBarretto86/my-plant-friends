@@ -1,9 +1,5 @@
 import React from 'react';
 
-import sunlightImage from './Images/sun.png';
-import wateringcanImage from './Images/wateringcan.png';
-import dogImage from './Images/dog.png';
-
 import "./Selector.scss";
 
 class Selector extends React.Component {
@@ -12,50 +8,39 @@ class Selector extends React.Component {
 
         this.state = { value: "" };
 
-        this.illustration = this.illustration.bind(this);
-        this.description = this.description.bind(this);
         this.handleChange = this.handleChange.bind(this);
+        this.selectorOptions = this.selectorOptions.bind(this);
     }
 
-    illustration() {
-        switch (this.props.type) {
-            case "sunlight":
-                return sunlightImage;
-            case "water":
-                return wateringcanImage;
-            case "pets":
-                return dogImage;
-        }
-    }
+    selectorOptions() {
+        let options = []
 
-    description() {
-        switch (this.props.type) {
-            case "sunlight":
-                return <p><strong>1.</strong> Set the amount of <strong>sunlight</strong> your plant will get.</p>;
-            case "water":
-                return <p><strong>2.</strong> How often do you want to <strong>water</strong> your plant?</p>
-            case "pets":
-                return <p><strong>3.</strong> Do you have pets? Do they <strong>chew</strong> plants?</p>;
-        }
+        this.props.options.forEach((option, index) => {
+            options.push(<option key={index} value={option.value}>{option.key.toString()}</option >)
+        });
+
+        return options;
     }
 
     handleChange(event) {
-        this.state.value = event.target.value;
+        let select = event.target
+        this.setState({ value: select.value });
+
+        this.props.updateTerms(this.props.param, select.value)
+
+        this.props.trySearchTerms();
     }
 
     render() {
         return (
-            <div className={`selector selector__${this.props.type}`}>
-                <img className={`selector__illustration selector__illustration--${this.props.type}`} src={this.illustration()} />
-                <div className="selector__description" >{this.description()}</div>
+            <div className={`selector selector__${this.props.param}`}>
+                <img className={`selector__illustration selector__illustration--${this.props.param}`} src={this.props.illustrationUrl} />
+                <div className="selector__description" >{this.props.description}</div>
 
                 <div className="selector__select">
-                    <select id={`select-${this.props.type}`} value={this.state.value} onChange={this.handleChange} >
-                        <option value="">Select...</option>
+                    <select onChange={this.handleChange} id={`select-${this.props.param}`} defaultValue={this.props.defaultValue} >
                         {
-                            this.props.options.map((option) => {
-                                return <option key={option} value={option}>{option.toString()}</option>
-                            })
+                            this.selectorOptions().map(option => option)
                         }
                     </select>
                 </div>

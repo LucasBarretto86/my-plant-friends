@@ -1,4 +1,5 @@
 import React from 'react';
+
 import GreenThumb from '../../lib/GreenThumb';
 
 import Hero from '../Hero/Hero';
@@ -11,57 +12,26 @@ class App extends React.Component {
     constructor(props) {
         super(props)
 
-        this.state = {
-            plants: [
-                {
-                    id: 1,
-                    name: "Euphorbia eritrea",
-                    sun: "high",
-                    water: "rarely",
-                    url: "https://storage.googleapis.com/front-br-challenges.appspot.com/green-thumb-v2/plants/euphorbia-eritrea.png",
-                    price: 25,
-                    toxicity: false,
-                    staff_favorite: true
-                },
-                {
-                    id: 2,
-                    name: "Euphorbia eritrea",
-                    sun: "high",
-                    water: "rarely",
-                    url: "https://storage.googleapis.com/front-br-challenges.appspot.com/green-thumb-v2/plants/euphorbia-eritrea.png",
-                    price: 25,
-                    toxicity: false,
-                    staff_favorite: false
-                }
-            ],
-            selections: [
-                { type: "sunlight", options: ["no", "low", "high"] },
-                { type: "water", options: ["regularly", "daily", "rarely"] },
-                { type: "pets", options: ["yes", "no"] }
-            ]
-        };
-
+        this.state = { plants: [] };
         this.hasPlants = this.hasPlants.bind(this);
-        this.refreshResults = this.refreshResults.bind(this);
         this.searchForPlants = this.searchForPlants.bind(this);
+    }
+    componentDidUpdate(prevState) {
+        console.log(this.state.plants)
+        // if (this.state != prevState) {
+        //     <SelectionResults plants={this.state.plans} hasPlants={this.hasPlants} />
+        // }
     }
 
     hasPlants() {
         return (this.state.plants.length > 0);
     }
 
-    refreshResults() {
-        document.querySelector("#selection-results").outerHTML.replace(
-            <SelectionResults plants={this.state.plants} onHasPlants={this.hasPlants} />
-        );
-
-    }
-
-    searchForPlants(term) {
-        GreenThumb.findMyGreenFriend(term).then(results => {
-            this.setState({ plants: results });
-            this.refreshResults();
-        })
+    searchForPlants(terms) {
+        GreenThumb.findMyGreenFriend(terms).then(plants => {
+            console.log(plants)
+            this.setState({ plants: plants });
+        });
     }
 
     render() {

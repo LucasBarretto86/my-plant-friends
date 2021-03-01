@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/share/yarn/bin/yarn.js add Hero.scss
+  /usr/local/bin/node /usr/share/yarn/bin/yarn.js add react-dom;
 
 PATH: 
   /home/mohamed28/Downloads/front-end-test-3/node_modules/.bin:/home/mohamed28/Downloads/node_modules/.bin:/home/mohamed28/node_modules/.bin:/home/node_modules/.bin:/node_modules/.bin:/usr/local/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/home/mohamed28/.rbenv/plugins/ruby-build/bin:/home/mohamed28/.rbenv/shims:/home/mohamed28/.rbenv/bin:/home/mohamed28/.rbenv/plugins/ruby-build/bin:/home/mohamed28/.rbenv/shims:/home/mohamed28/.rbenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
@@ -14,7 +14,7 @@ Platform:
   linux x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/Hero.scss: Not found
+  Error: https://registry.yarnpkg.com/react-dom;: Not found
       at Request.params.callback [as _callback] (/usr/share/yarn/lib/cli.js:66988:18)
       at Request.self.callback (/usr/share/yarn/lib/cli.js:140749:22)
       at Request.emit (events.js:314:20)
@@ -31,9 +31,9 @@ npm manifest:
     "name": "front-end-test-2",
     "version": "1.0.0",
     "description": "Simple Parcel Sandbox",
-    "main": "index.js",
+    "main": "src/index.js",
     "scripts": {
-      "start": "parcel index.html --open parcel images/*"
+      "start": "parcel src/index.html --open"
     },
     "dependencies": {
       "babel-preset-env": "^1.7.0",
