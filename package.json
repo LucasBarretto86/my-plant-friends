@@ -7,10 +7,10 @@
     "start": "parcel index.html --open"
   },
   "dependencies": {
+    "babel-runtime": "^7.0.0-beta.3",
     "parcel": "1.12.4"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.6.1",
     "sass": "^1.32.8"
   },
   "keywords": []

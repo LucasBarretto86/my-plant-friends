@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" media="screen and (min-width: 1200px)" href="stylesheet/desktop.scss" />
   <link rel="stylesheet" media="screen and (max-width: 1200px)" href="stylesheet/mobile.scss" />
-  <script src="./lib/main.js"></script>
+  <script type="module" src="./lib/main.js"></script>
 </head>
 
 <body>
@@ -63,8 +63,8 @@
         <div class="selector__select">
           <select id="selector-pets" name="pets">
             <option value="" selected>Select...</option>
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
+            <option value="true">Yes</option>
+            <option value="false">No</option>
           </select>
         </div>
       </div>
@@ -72,53 +72,25 @@
       </div>
   </section>
 
-  <template id="search-result">
-    <section id="selection-results" class="selection-results">
-      <div id="plants" class="plants">
-        <div class="plants__header">
-          <img class="plants__illustration" src="images/illustrations/pick.png" alt="Hand holding a plant__content"
-            srcset="">
-          <h2>Our picks for you</h2>
-        </div>
-
-        <div class="plants__content">
-          <div class="plant plant--favotire">
-            <div class="plant__content">
-              <img class="plant__image" src="images/plants/bunny-ears-cacti.jpg" alt="bunny-ears-cacti">
-              <div class="plant__name">Bunny eats cacti</div>
-              <div class="plant__price">$25</div>
-              <div class="plant__icons">
-                <img src="images/icons/pet.svg" alt="Pet Icon">
-                <img src="images/icons/mid-sun.svg" alt="Sun Icon">
-                <img src="images/icons/1-drop.svg" alt="Drop Icon">
-              </div>
-            </div>
-          </div>
-
-          <div class="plant">
-            <div class="plant__content">
-              <img class="plant__image" src="images/plants/bunny-ears-cacti.jpg" alt="bunny-ears-cacti">
-              <div class="plant__name">Bunny eats cacti</div>
-              <div class="plant__price">$25</div>
-              <div class="plant__icons">
-                <img src="images/icons/pet.svg" alt="Pet Icon">
-                <img src="images/icons/mid-sun.svg" alt="Sun Icon">
-                <img src="images/icons/1-drop.svg" alt="Drop Icon">
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="plants__footer">
-          <a href="#selection-bar">
-            <span><img src="images/icons/arrow-up.svg" alt="Arrow Up"></span>
-            <span>back to the top</span>
-          </a>
-        </div>
+  <section id="selection-results" class="selection-results hidden">
+    <div id="plants" class="plants">
+      <div class="plants__header">
+        <img class="plants__illustration" src="images/illustrations/pick.png" alt="Hand holding a plant__content"
+          srcset="">
+        <h2>Our picks for you</h2>
       </div>
-  </template>
 
-  <template id="no-result">
+      <div class="plants__content">
+      </div>
+
+      <div class="plants__footer">
+        <a href="#selection-bar">
+          <span><img src="images/icons/arrow-up.svg" alt="Arrow Up"></span>
+          <span>back to the top</span>
+        </a>
+      </div>
+    </div>
+
     <div id="no-plants" class="no-plants">
       <div class="no-plants__content">
         <h2>No results yet…</h2>
@@ -127,8 +99,6 @@
 
       <img class="no-plants__illustration" src="images/illustrations/no-results.png" alt="No result icon">
     </div>
-    </section>
-  </template>
+  </section>
 </body>
-
 </html>
