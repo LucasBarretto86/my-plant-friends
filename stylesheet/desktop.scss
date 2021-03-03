@@ -1,21 +1,19 @@
-@import "./reset.scss";
-@import "./util.scss";
-
 h1 {
-    font-size: 70px;
-    line-height: 85.33px;
+    font-size: 7rem;
+    line-height: 8.5rem;
 }
 
 h2 {
-    font-size: 55px;
-    line-height: 67.05px;
+    font-size: 5.5rem;
+    line-height: 6.7rem;
 }
 
 .hero {
     position: relative;
-    padding: 56px 20%;
-    height: calc(100vh - 300px);
-    max-height: 500px;
+    padding: 5.6em 20%;
+    height: calc(100vh - 30rem);
+    min-width: 30rem;
+    max-height: 50rem;
     background-color: #75BC97;
     background-image:
         url("../images/hero/desktop/left-leaves.png"),
@@ -28,19 +26,19 @@ h2 {
     &__content {
         display: flex;
         flex-direction: column;
-        width: 400px;
-        max-height: 500px;
-        z-index: 1000;
+        width: 40rem;
+        max-height: 50rem;
+        z-index: 2;
     }
 
     &__logo {
-        width: 212px;
-        margin-bottom: 32px;
+        width: 21.2rem;
+        margin-bottom: 3.2em;
     }
 
     &__message {
         color: #FFF;
-        margin-bottom: 24px;
+        margin-bottom: 0.24em;
     }
 
     &__arrow {
