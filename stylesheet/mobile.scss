@@ -63,11 +63,13 @@ h2 {
 .selection-bar {
     background-color: #FFF;
     padding: 24px 24px 48px 48px;
+    scroll-snap-type: y mandatory;
 
     &__form {
         display: flex;
         flex-direction: column;
         align-items: center;
+
     }
 
     .selector {
@@ -76,6 +78,7 @@ h2 {
         grid-template-rows: 75px auto auto;
         grid-gap: 16px;
         width: 100%;
+        scroll-snap-align: center;
 
         &__illustration {
             margin-top: auto;
@@ -95,6 +98,10 @@ h2 {
                 width: 75px;
                 height: 62px;
             }
+        }
+
+        &__description {
+            padding-right: 24px;
         }
 
         &__select {
@@ -144,24 +151,6 @@ h2 {
                 color: #A8A8A8;
                 outline: none;
 
-                &~.selector__input--actived {
-                    display: none;
-                }
-
-                &~.selector__input--deactived {
-                    display: flex;
-                }
-
-                &:focus-within:hover {
-                    &~.selector__input--actived {
-                        display: flex;
-                    }
-
-                    &~.selector__input--deactived {
-                        display: none;
-                    }
-                }
-
                 option {
                     padding: 0;
                     margin: 0 -24px;
@@ -209,13 +198,16 @@ h2 {
         margin-bottom: 32px;
         overflow-x: scroll;
         padding: 0 24px;
+        scroll-snap-type: x mandatory;
 
         .plant {
             position: relative;
             padding: 18px;
             width: 260px;
-            background-color: #FFF;
             border-radius: 5px;
+            background-color: #FFF;
+            box-shadow: 8px 8px 16px 8px rgba(0, 0, 0, 0.02);
+            scroll-snap-align: center;
 
             .plant {
                 display: grid;
@@ -239,6 +231,7 @@ h2 {
                     grid-column: 1 / span 4;
                     width: 100%;
                     height: 224px;
+                    min-height: 100%;
                     margin: auto;
                     background-size: auto 100% !important;
                     overflow: hidden;
