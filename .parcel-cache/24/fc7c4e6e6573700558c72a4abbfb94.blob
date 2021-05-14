@@ -1,0 +1,24 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+var _imagesIconsSvg = require("../images/icons/*.svg");
+var _imagesIconsSvgDefault = _parcelHelpers.interopDefault(_imagesIconsSvg);
+const Plant = {
+  render(plant) {
+    return `
+        <div class="plant plant--${plant.staff_favorite ? 'favorite' : ''}">
+            <div class="plant__content">
+                <div class="plant__image" style="background: url('${plant.url}') no-repeat center; background-size: contain;"></div>
+                <div class="plant__name">${plant.name}</div>
+                <div class="plant__price">$${plant.price}</div>
+                <div class="plant__icons">
+                    ${plant.toxicity ? `<img src=${_imagesIconsSvgDefault.default["toxic"]} alt="Toxicity Icon">` : ""}
+                    <img src="${_imagesIconsSvgDefault.default[`sun-${plant.sun}`]}" alt="Sun Icon">
+                    <img src="${_imagesIconsSvgDefault.default[`water-${plant.water}`]}" alt="Water Icon">
+                    ${plant.pets ? `<img src="${_imagesIconsSvgDefault.default["pets"]}" alt="Pet Icon">` : ""}
+                    </div>
+            </div>
+        </div>
+    `;
+  }
+};
+exports.default = Plant;

@@ -4,14 +4,15 @@
   "description": "Simple Parcel Sandbox",
   "main": "index.html",
   "scripts": {
-    "start": "parcel index.html --open"
+    "start": "parcel -p 5505 src/index.html --open",
+    "build": "parcel build src/index.html --no-cache --public-url ./dist/",
+    "deploy": "rm -rf dist/* && npm run build && cd dist && cp index.html ../index.html",
+    "kills": "kill -9 $(lsof -t -i:5505)"
   },
   "dependencies": {
-    "babel-runtime": "^7.0.0-beta.3",
-    "parcel": "1.12.4"
+    "parcel": "^2.0.0-beta.2"
   },
   "devDependencies": {
-    "sass": "^1.32.8"
-  },
-  "keywords": []
+    "@parcel/transformer-sass": "^2.0.0-beta.2"
+  }
 }

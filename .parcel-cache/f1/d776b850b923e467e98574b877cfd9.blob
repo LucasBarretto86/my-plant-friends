@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <title>Front End Test - Greenthumb</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/index.HASH_REF_31e0961c1ef3803275c5de4960815d34.css">
+
+</head>
+
+<body>
+  <header id="hero" class="hero">
+    <a href="#selection-bar">
+      <div class="hero__content">
+        <img class="hero__logo" src="/logo-white.HASH_REF_ce6d04054a8adbbe5b6ce8817ae80b59.svg" alt="Greenthumb">
+        <h1 class="hero__message">Find your next green friend</h1>
+        <img class="hero__arrow" src="/arrow-down.HASH_REF_caa28e96b92e498c45bc3fde917b0826.svg" alt="Arrow Down">
+      </div>
+    </a>
+  </header>
+
+  <section id="selection-bar" class="selection-bar">
+    <form class="selection-bar__form">
+      <div id="selector-sunlight" class="selector">
+        <img class="selector__illustration selector__illustration--sun" src="/sun.HASH_REF_01a5f0d59d9d79bdfdea2c5b90ee01cb.png" alt="Sun">
+        <p class="selector__description">
+          <strong>1.</strong> Set the amount of <strong>sunlight</strong> your plant will get.
+        </p>
+        <div class="selector__select">
+          <select id="selector-sunlight" name="sun">
+            <option value="" selected="">Select...</option>
+            <option value="no">None</option>
+            <option value="low">Low</option>
+            <option value="high">High</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="selector-water" class="selector">
+        <img class="selector__illustration selector__illustration--wateringcan" src="/wateringcan.HASH_REF_5cebc02f99c555e6f068f476d0ec0160.png" alt="Watering can">
+        <p class="selector__description">
+          <strong>2.</strong> How often do you want to <strong>walter</strong> your plant?
+        </p>
+        <div class="selector__select">
+          <select id="selector-water" name="water">
+            <option value="" selected="">Select...</option>
+            <option value="regularly">Regularly</option>
+            <option value="daily">Daily</option>
+            <option value="rarely">Rarely</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="selector-pet" class="selector">
+        <img class="selector__illustration selector__illustration--pets" src="/dog.HASH_REF_4dcce75c8490fef4c947ba84fef9d7e4.png" alt="Dog">
+        <p class="selector__description">
+          <strong>3.</strong> Do you have pets? Do they <strong>chew</strong> plants?
+        </p>
+        <div class="selector__select">
+          <select id="selector-pets" name="pets">
+            <option value="" selected="">Select...</option>
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+          </select>
+        </div>
+      </div>
+
+      
+  </form></section>
+
+  <section id="selection-results" class="selection-results hidden">
+    <div id="plants" class="plants hidden">
+      <div class="plants__header">
+        <img class="plants__illustration" src="/pick.HASH_REF_3172c3f01b5e195a7431e9177567db98.png" alt="Hand holding a plant__content" srcset="/index.html">
+        <h2>Our picks for you</h2>
+      </div>
+
+      <div class="plants__content"></div>
+
+      <div class="plants__footer">
+        <a href="#selection-bar">
+          <span><img src="/arrow-up.HASH_REF_a000a254a29482409e81a05180b6095d.svg" alt="Arrow Up"></span>
+          <span>back to the top</span>
+        </a>
+      </div>
+    </div>
+
+    <div id="no-plants" class="no-plants">
+      <div class="no-plants__content">
+        <h2>No results yet…</h2>
+        <p>Use the filters above to find the plant that best fits your environment :)</p>
+      </div>
+
+      <img class="no-plants__illustration" src="/no-results.HASH_REF_3cd09cf2a7eb0d44ed67b2af18446cd2.png" alt="No result icon">
+    </div>
+  </section>
+  <script src="/index.HASH_REF_0fa2489aa94c8731ee2aee9f3fafb3e2.js"></script>
+</body>
+
+</html>

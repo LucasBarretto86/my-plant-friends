@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <title>Front End Test - Greenthumb</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/stylesheets/index.scss" />
+
+</head>
+
+<body>
+  <header id="hero" class="hero">
+    <a href="#selection-bar">
+      <div class="hero__content">
+        <img class="hero__logo" src="./assets/images/icons/logo-white.svg" alt="Greenthumb" />
+        <h1 class="hero__message">Find your next green friend</h1>
+        <img class="hero__arrow" src="./assets/images/icons/arrow-down.svg" alt="Arrow Down">
+      </div>
+    </a>
+  </header>
+
+  <section id="selection-bar" class="selection-bar">
+    <form class="selection-bar__form">
+      <div id="selector-sunlight" class="selector">
+        <img class="selector__illustration selector__illustration--sun" src="./assets/images/illustrations/sun.png" alt="Sun">
+        <p class="selector__description">
+          <strong>1.</strong> Set the amount of <strong>sunlight</strong> your plant will get.
+        </p>
+        <div class="selector__select">
+          <select id="selector-sunlight" name="sun">
+            <option value="" selected>Select...</option>
+            <option value="no">None</option>
+            <option value="low">Low</option>
+            <option value="high">High</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="selector-water" class="selector">
+        <img class="selector__illustration selector__illustration--wateringcan"
+          src="./assets/images/illustrations/wateringcan.png" alt="Watering can">
+        <p class="selector__description">
+          <strong>2.</strong> How often do you want to <strong>walter</strong> your plant?
+        </p>
+        <div class="selector__select">
+          <select id="selector-water" name="water">
+            <option value="" selected>Select...</option>
+            <option value="regularly">Regularly</option>
+            <option value="daily">Daily</option>
+            <option value="rarely">Rarely</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="selector-pet" class="selector">
+        <img class="selector__illustration selector__illustration--pets" src="./assets/images/illustrations/dog.png" alt="Dog">
+        <p class="selector__description">
+          <strong>3.</strong> Do you have pets? Do they <strong>chew</strong> plants?
+        </p>
+        <div class="selector__select">
+          <select id="selector-pets" name="pets">
+            <option value="" selected>Select...</option>
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+          </select>
+        </div>
+      </div>
+
+      </div>
+  </section>
+
+  <section id="selection-results" class="selection-results hidden">
+    <div id="plants" class="plants hidden">
+      <div class="plants__header">
+        <img class="plants__illustration" src="./assets/images/illustrations/pick.png" alt="Hand holding a plant__content"
+          srcset="">
+        <h2>Our picks for you</h2>
+      </div>
+
+      <div class="plants__content"></div>
+
+      <div class="plants__footer">
+        <a href="#selection-bar">
+          <span><img src="./assets/images/icons/arrow-up.svg" alt="Arrow Up"></span>
+          <span>back to the top</span>
+        </a>
+      </div>
+    </div>
+
+    <div id="no-plants" class="no-plants">
+      <div class="no-plants__content">
+        <h2>No results yet…</h2>
+        <p>Use the filters above to find the plant that best fits your environment :)</p>
+      </div>
+
+      <img class="no-plants__illustration" src="./assets/images/illustrations/no-results.png" alt="No result icon">
+    </div>
+  </section>
+  <script src="./index.js"></script>
+</body>
+
+</html>

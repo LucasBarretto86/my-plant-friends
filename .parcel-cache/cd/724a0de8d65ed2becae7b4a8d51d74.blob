@@ -1,0 +1,9 @@
+var _libApp = require("./lib/app");
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+var _libAppDefault = _parcelHelpers.interopDefault(_libApp);
+const app = new _libAppDefault.default();
+const search = e => {
+  app.updateTerm(e.target.name, e.target.value);
+  app.search();
+};
+document.querySelector(".selection-bar__form").addEventListener('change', search);
